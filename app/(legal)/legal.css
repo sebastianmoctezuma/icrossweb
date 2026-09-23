@@ -1,0 +1,192 @@
+/* Hoja propia para los dos documentos legales. Va en CSS plano y no en
+   utilidades: es prosa larga, y un documento que alguien puede tener que
+   imprimir o pegar en un expediente se controla mejor así.
+
+   El revisor de Apple abre estas páginas. Tienen que cargar rápido, leerse
+   en un teléfono y no depender de JavaScript para mostrar una sola letra. */
+
+.legal-envoltura {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px 90px;
+}
+
+.legal-cabeza {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 24px 0;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--color-linea);
+}
+
+.legal-marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  color: var(--color-tinta);
+  text-decoration: none;
+}
+
+.legal-marca img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.legal-volver {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-azul);
+  text-decoration: none;
+}
+
+.legal-volver:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-cuerpo h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin: 0 0 6px;
+}
+
+.legal-fecha {
+  font-size: 0.9rem;
+  color: var(--color-gris);
+  margin: 0 0 28px;
+}
+
+.legal-nota {
+  background: color-mix(in oklab, var(--color-azul) 5%, white);
+  border: 1px solid color-mix(in oklab, var(--color-azul) 16%, white);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 30px;
+}
+
+.legal-nota p {
+  margin: 0;
+}
+
+.legal-cuerpo h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin: 38px 0 10px;
+  scroll-margin-top: 20px;
+}
+
+.legal-cuerpo h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 22px 0 6px;
+}
+
+.legal-cuerpo p,
+.legal-cuerpo li {
+  font-size: 1rem;
+  line-height: 1.72;
+  color: #3a4051;
+}
+
+.legal-cuerpo p {
+  margin: 0 0 12px;
+}
+
+.legal-cuerpo ul {
+  padding-left: 22px;
+  margin: 8px 0 16px;
+}
+
+.legal-cuerpo li {
+  margin-bottom: 8px;
+}
+
+.legal-cuerpo strong {
+  color: var(--color-tinta);
+  font-weight: 700;
+}
+
+.legal-cuerpo a {
+  color: var(--color-azul);
+  text-underline-offset: 3px;
+}
+
+/* Ficha de datos del responsable: se lee de un vistazo y es lo primero
+   que busca tanto un usuario como una autoridad. */
+.legal-ficha {
+  border: 1px solid var(--color-linea);
+  border-radius: 14px;
+  padding: 4px 18px;
+  margin: 14px 0 20px;
+  background: #fff;
+}
+
+.legal-ficha div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-linea-suave);
+}
+
+.legal-ficha div:last-child {
+  border-bottom: 0;
+}
+
+.legal-ficha dt {
+  flex: 0 0 150px;
+  font-size: 0.9rem;
+  color: var(--color-gris);
+}
+
+.legal-ficha dd {
+  flex: 1 1 260px;
+  margin: 0;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-tinta);
+}
+
+.legal-pie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  margin-top: 46px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-linea);
+  font-size: 0.88rem;
+  color: var(--color-gris);
+}
+
+.legal-pie a {
+  color: var(--color-azul);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-pie a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media print {
+  .legal-volver,
+  .legal-pie {
+    display: none;
+  }
+  .legal-envoltura {
+    max-width: none;
+    padding: 0;
+  }
+}

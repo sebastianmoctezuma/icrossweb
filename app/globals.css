@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Tokens de iCross. Los colores son EXACTAMENTE los de la app
+   (lib/tema/tema.dart): si el sitio y la app no comparten el
+   azul, la marca se ve como dos cosas distintas.
+
+   El acento es AZUL OSCURO #1E40AF. NUNCA morado: ese color se
+   quitó de la app a propósito y aclarar el azul multiplicando
+   canales lo manda justo ahí. Si hace falta un azul más claro,
+   se conserva el TONO (221-224°), como en los tokens de abajo.
+   ============================================================ */
+@theme {
+  --color-azul: #1e40af;
+  --color-azul-claro: #3b6fe0;
+  --color-azul-oscuro: #123287;
+
+  --color-fondo: #f4f5f7;
+  --color-superficie: #ffffff;
+  --color-tinta: #1f2430;
+  --color-gris: #6b7080;
+  --color-gris-suave: #8a8f9c;
+  --color-linea: #e3e6ec;
+  --color-linea-suave: #e9ebf0;
+
+  --color-verde: #12b76a;
+  --color-naranja: #f59e0b;
+
+  /* Curva de salida propia (el `salidaFuerte` de la app). Nunca ease-in:
+     arranca lento y hace sentir la interfaz pesada justo en el momento
+     en que el usuario está mirando. */
+  --ease-salida: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-tinta);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-azul) 18%, transparent);
+}
+
+/* Foco visible y consistente: la alternativa es que el sitio sea
+   inutilizable con teclado, que además es el modo en que un revisor
+   de accesibilidad lo va a abrir. */
+:focus-visible {
+  outline: 2px solid var(--color-azul);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
