@@ -314,11 +314,15 @@ export default function AvisoPrivacidad() {
 
       <h2 id="menores">10. Menores de edad</h2>
       <p>
-        {MARCA} <strong>no está dirigida a menores de 17 años</strong> y así está clasificada en la
-        tienda de aplicaciones, porque incluye contenido publicado por otros usuarios. No recabamos
-        conscientemente datos de menores de esa edad. Si detectamos una cuenta de un menor, la
-        eliminaremos junto con su información; si eres madre, padre o tutor y crees que esto ocurrió,
-        escríbenos a <a href={`mailto:${CORREO}`}>{CORREO}</a>.
+        {MARCA} <strong>no está dirigida a menores de 13 años</strong> y así está clasificada en la
+        tienda de aplicaciones. No recabamos conscientemente datos de menores de esa edad; si
+        detectamos una cuenta de alguien menor de 13, la eliminaremos junto con su información.
+      </p>
+      <p>
+        Si tienes <strong>entre 13 y 17 años</strong>, usa la aplicación con el conocimiento y el
+        consentimiento de tu madre, padre o tutor, que es quien autoriza el tratamiento de tus datos
+        personales conforme a la Ley. Si eres madre, padre o tutor y quieres que eliminemos la cuenta
+        de un menor a tu cargo, escríbenos a <a href={`mailto:${CORREO}`}>{CORREO}</a>.
       </p>
 
       <h2 id="cookies">11. Cookies</h2>

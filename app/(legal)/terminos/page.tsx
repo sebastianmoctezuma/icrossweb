@@ -68,9 +68,11 @@ export default function Terminos() {
 
       <h2 id="aceptacion">3. Aceptación y capacidad</h2>
       <p>
-        Para usar la aplicación debes tener al menos <strong>17 años</strong>. Al registrarte
-        declaras que cumples ese requisito y que la información que proporcionas es veraz. Si usas la
-        aplicación en nombre de una persona moral, declaras tener facultades para obligarla.
+        Para usar la aplicación debes tener al menos <strong>13 años</strong>. Si eres menor de 18,
+        necesitas que tu madre, padre o tutor conozca y acepte estos Términos y el Aviso de
+        Privacidad antes de que crees tu cuenta. Al registrarte declaras que cumples esos requisitos
+        y que la información que proporcionas es veraz. Si usas la aplicación en nombre de una
+        persona moral, declaras tener facultades para obligarla.
       </p>
 
       <h2 id="cuenta">4. Tu cuenta</h2>
